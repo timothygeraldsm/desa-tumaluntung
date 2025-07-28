@@ -138,7 +138,7 @@ export default function HomePage() {
             <div className="relative">
               <div className="relative h-80 lg:h-96 rounded-2xl overflow-hidden shadow-xl">
                 <Image
-                  src="/placeholder.svg?height=500&width=600&text=Aktivitas+masyarakat+Desa+Tumaluntung+Satu"
+                  src="/foto/foto 2.jpeg"
                   alt="Aktivitas masyarakat Desa Tumaluntung Satu"
                   fill
                   className="object-cover"

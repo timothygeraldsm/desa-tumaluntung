@@ -17,7 +17,7 @@ export default function HistoryPage() {
         {/* Hero Image */}
         <div className="relative h-64 md:h-80 rounded-2xl overflow-hidden shadow-xl mb-8">
           <Image
-            src="/placeholder.svg?height=400&width=800"
+            src="/foto/foto 4.jpeg"
             alt="Sejarah Desa Tumaluntung Satu"
             fill
             className="object-cover"
