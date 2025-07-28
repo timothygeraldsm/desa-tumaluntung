@@ -30,7 +30,7 @@ export default function HomePage() {
       <section className="relative h-[70vh] flex items-center justify-center overflow-hidden">
         <div className="absolute inset-0 bg-gradient-to-r from-green-800/90 to-green-600/90 z-10"></div>
         <Image
-          src="/placeholder.svg?height=800&width=1400&text=Pemandangan+Desa+Tumaluntung+Satu+dengan+perbukitan+hijau+dan+sawah"
+          src="/foto/foto 2.jpeg"
           alt="Pemandangan Desa Tumaluntung Satu dengan perbukitan hijau dan sawah"
           fill
           className="object-cover"

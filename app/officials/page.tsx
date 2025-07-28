@@ -4,9 +4,9 @@ import { Badge } from "@/components/ui/badge"
 import { Crown, Users, FileText, Building2, MapPin, Phone, Clock } from "lucide-react"
 
 const officials = [
-  { name: "Bpk. Andreas Lumban Gaol", position: "Hukum Tua", category: "Kepala Desa" },
-  { name: "Ibu Maria Sari Dewi", position: "Sekretaris Desa", category: "Sekretariat" },
-  { name: "Bpk. Jhon Rompis", position: "Bendahara Desa", category: "Sekretariat" },
+  { name: "Bpk. Andreas Lumban Gaol", position: "Hukum Tua", category: "Kepala Desa" photo: "/foto/hukum tua.jpg"},
+  { name: "Ibu Maria Sari Dewi", position: "Sekretaris Desa", category: "Sekretariat" photo: "/foto/sekretaris.jpg"},
+  { name: "Bpk. Jhon Rompis", position: "Bendahara Desa", category: "Sekretariat" photo: "/foto/bendahara.jpg" },
   { name: "Bpk. Marthen Kalangi", position: "Kepala Urusan Pemerintahan", category: "Kaur" },
   { name: "Ibu Linda Manurung", position: "Kepala Urusan Pembangunan", category: "Kaur" },
   { name: "Bpk. David Sitorus", position: "Kepala Urusan Kesejahteraan Rakyat", category: "Kaur" },
@@ -176,28 +176,37 @@ export default function OfficialsPage() {
                     <CardHeader className="text-center pb-4">
                       <div className="relative">
                         <Avatar
-                          className={`${
-                            isVillageHead ? "w-32 h-32" : "w-24 h-24"
-                          } mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
-                        >
-                          <AvatarFallback
-                            className={`text-xl font-bold shadow-inner ${
-                              categoryName === "Kepala Desa"
-                                ? "bg-red-200 text-red-800"
-                                : categoryName === "Sekretariat"
-                                  ? "bg-blue-200 text-blue-800"
-                                  : categoryName === "Kaur"
-                                    ? "bg-green-200 text-green-800"
-                                    : "bg-purple-200 text-purple-800"
-                            }`}
-                          >
-                            {official.name
-                              .split(" ")
-                              .map((n) => n[0])
-                              .join("")
-                              .slice(0, 2)}
-                          </AvatarFallback>
-                        </Avatar>
+  className={`${
+    isVillageHead ? "w-32 h-32" : "w-24 h-24"
+  } mx-auto mb-4 group-hover:scale-110 transition-transform duration-300 shadow-lg`}
+>
+  {official.photo ? (
+    <img
+      src={official.photo}
+      alt={official.name}
+      className="w-full h-full object-cover rounded-full"
+    />
+  ) : (
+    <AvatarFallback
+      className={`text-xl font-bold shadow-inner ${
+        categoryName === "Kepala Desa"
+          ? "bg-red-200 text-red-800"
+          : categoryName === "Sekretariat"
+            ? "bg-blue-200 text-blue-800"
+            : categoryName === "Kaur"
+              ? "bg-green-200 text-green-800"
+              : "bg-purple-200 text-purple-800"
+      }`}
+    >
+      {official.name
+        .split(" ")
+        .map((n) => n[0])
+        .join("")
+        .slice(0, 2)}
+    </AvatarFallback>
+  )}
+</Avatar>
+
                         {isVillageHead && (
                           <div className="absolute -top-2 -right-2">
                             <Crown className="h-8 w-8 text-yellow-500 drop-shadow-lg" />
