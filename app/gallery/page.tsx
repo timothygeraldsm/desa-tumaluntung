@@ -1,0 +1,228 @@
+"use client"
+
+import { useState } from "react"
+import { Card } from "@/components/ui/card"
+import { Button } from "@/components/ui/button"
+import { Dialog, DialogContent } from "@/components/ui/dialog"
+import { X, ChevronLeft, ChevronRight, Images } from "lucide-react"
+import Image from "next/image"
+
+const galleryImages = [
+  {
+    id: 1,
+    src: "/placeholder.svg?height=400&width=600&text=Pemandangan+sawah+hijau+dengan+perbukitan+di+Desa+Tumaluntung+Satu",
+    alt: "Pemandangan sawah hijau dengan perbukitan",
+    title: "Sawah Hijau Desa",
+    date: "2024-01-15",
+    description: "Pemandangan indah sawah hijau yang membentang luas dengan latar belakang perbukitan",
+  },
+  {
+    id: 2,
+    src: "/placeholder.svg?height=400&width=600&text=Kantor+desa+Tumaluntung+Satu+dengan+bendera+Indonesia",
+    alt: "Kantor Desa Tumaluntung Satu",
+    title: "Kantor Desa",
+    date: "2024-01-10",
+    description: "Kantor Hukum Tua Desa Tumaluntung Satu yang menjadi pusat pelayanan masyarakat",
+  },
+  {
+    id: 3,
+    src: "/placeholder.svg?height=400&width=600&text=Kegiatan+gotong+royong+masyarakat+desa+membersihkan+jalan",
+    alt: "Kegiatan gotong royong masyarakat",
+    title: "Gotong Royong",
+    date: "2024-01-08",
+    description: "Kegiatan gotong royong masyarakat dalam membersihkan dan memperbaiki jalan desa",
+  },
+  {
+    id: 4,
+    src: "/placeholder.svg?height=400&width=600&text=Petani+sedang+bekerja+di+sawah+dengan+cangkul",
+    alt: "Petani bekerja di sawah",
+    title: "Aktivitas Pertanian",
+    date: "2024-01-05",
+    description: "Petani desa sedang bekerja mengolah tanah di area persawahan",
+  },
+  {
+    id: 5,
+    src: "/placeholder.svg?height=400&width=600&text=Perayaan+17+Agustus+di+lapangan+desa+dengan+bendera+merah+putih",
+    alt: "Perayaan 17 Agustus",
+    title: "HUT RI ke-79",
+    date: "2024-08-17",
+    description: "Perayaan Hari Kemerdekaan Indonesia ke-79 di lapangan desa",
+  },
+  {
+    id: 6,
+    src: "/placeholder.svg?height=400&width=600&text=Jalan+desa+yang+sudah+diaspal+dengan+pohon+di+kiri+kanan",
+    alt: "Jalan desa yang sudah diaspal",
+    title: "Jalan Desa",
+    date: "2024-01-12",
+    description: "Jalan utama desa yang telah diaspal dengan pepohonan rindang di kiri kanan",
+  },
+  {
+    id: 7,
+    src: "/placeholder.svg?height=400&width=600&text=Musyawarah+desa+dengan+masyarakat+duduk+melingkar",
+    alt: "Musyawarah desa",
+    title: "Musyawarah Desa",
+    date: "2024-01-20",
+    description: "Kegiatan musyawarah desa untuk membahas program pembangunan",
+  },
+  {
+    id: 8,
+    src: "/placeholder.svg?height=400&width=600&text=Kebun+sayuran+hijau+dengan+berbagai+tanaman",
+    alt: "Kebun sayuran",
+    title: "Kebun Sayuran",
+    date: "2024-01-18",
+    description: "Kebun sayuran milik warga yang ditanam dengan berbagai jenis tanaman",
+  },
+  {
+    id: 9,
+    src: "/placeholder.svg?height=400&width=600&text=Sunset+di+perbukitan+dengan+siluet+pohon",
+    alt: "Sunset di perbukitan",
+    title: "Senja di Perbukitan",
+    date: "2024-01-22",
+    description: "Pemandangan matahari terbenam yang indah di perbukitan sekitar desa",
+  },
+  {
+    id: 10,
+    src: "/placeholder.svg?height=400&width=600&text=Posyandu+dengan+ibu+ibu+dan+balita",
+    alt: "Kegiatan Posyandu",
+    title: "Posyandu Balita",
+    date: "2024-01-25",
+    description: "Kegiatan Posyandu untuk pemeriksaan kesehatan balita dan ibu",
+  },
+  {
+    id: 11,
+    src: "/placeholder.svg?height=400&width=600&text=Masjid+desa+dengan+kubah+hijau",
+    alt: "Masjid desa",
+    title: "Masjid Desa",
+    date: "2024-01-14",
+    description: "Masjid desa yang menjadi tempat ibadah utama masyarakat muslim",
+  },
+  {
+    id: 12,
+    src: "/placeholder.svg?height=400&width=600&text=Festival+budaya+dengan+tarian+tradisional",
+    alt: "Festival budaya",
+    title: "Festival Budaya",
+    date: "2024-02-10",
+    description: "Festival budaya daerah dengan pertunjukan tarian tradisional",
+  },
+]
+
+export default function GalleryPage() {
+  const [selectedImage, setSelectedImage] = useState<(typeof galleryImages)[0] | null>(null)
+
+  const handleImageClick = (image: (typeof galleryImages)[0]) => {
+    setSelectedImage(image)
+  }
+
+  const handlePrevImage = () => {
+    if (!selectedImage) return
+    const currentIndex = galleryImages.findIndex((img) => img.id === selectedImage.id)
+    const prevIndex = currentIndex > 0 ? currentIndex - 1 : galleryImages.length - 1
+    setSelectedImage(galleryImages[prevIndex])
+  }
+
+  const handleNextImage = () => {
+    if (!selectedImage) return
+    const currentIndex = galleryImages.findIndex((img) => img.id === selectedImage.id)
+    const nextIndex = currentIndex < galleryImages.length - 1 ? currentIndex + 1 : 0
+    setSelectedImage(galleryImages[nextIndex])
+  }
+
+  return (
+    <div className="container py-12">
+      <div className="text-center mb-12">
+        <h1 className="text-4xl md:text-5xl font-bold text-green-800 mb-4">Galeri Foto</h1>
+        <p className="text-gray-600 max-w-2xl mx-auto text-lg">
+          Dokumentasi visual kehidupan, kegiatan, dan keindahan Desa Tumaluntung Satu dalam berbagai momen berharga.
+        </p>
+      </div>
+
+      {/* Image Grid */}
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
+        {galleryImages.map((image) => (
+          <Card
+            key={image.id}
+            className="group cursor-pointer hover:shadow-xl transition-all duration-300 overflow-hidden"
+          >
+            <div className="relative aspect-[4/3] overflow-hidden">
+              <Image
+                src={image.src || "/placeholder.svg"}
+                alt={image.alt}
+                fill
+                className="object-cover group-hover:scale-110 transition-transform duration-300"
+                onClick={() => handleImageClick(image)}
+              />
+              <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300" />
+            </div>
+          </Card>
+        ))}
+      </div>
+
+      {/* Image Modal */}
+      <Dialog open={!!selectedImage} onOpenChange={() => setSelectedImage(null)}>
+        <DialogContent className="max-w-4xl w-full p-0 bg-black">
+          {selectedImage && (
+            <div className="relative">
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute top-4 right-4 z-10 text-white hover:bg-white/20"
+                onClick={() => setSelectedImage(null)}
+              >
+                <X className="h-6 w-6" />
+              </Button>
+
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute left-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20"
+                onClick={handlePrevImage}
+              >
+                <ChevronLeft className="h-8 w-8" />
+              </Button>
+
+              <Button
+                variant="ghost"
+                size="icon"
+                className="absolute right-4 top-1/2 -translate-y-1/2 z-10 text-white hover:bg-white/20"
+                onClick={handleNextImage}
+              >
+                <ChevronRight className="h-8 w-8" />
+              </Button>
+
+              <div className="relative aspect-[4/3]">
+                <Image
+                  src={selectedImage.src || "/placeholder.svg"}
+                  alt={selectedImage.alt}
+                  fill
+                  className="object-contain"
+                />
+              </div>
+
+              <div className="p-6 bg-white">
+                <h2 className="text-2xl font-bold text-gray-800 mb-4">{selectedImage.title}</h2>
+                <p className="text-gray-600 mb-4">{selectedImage.description}</p>
+                <div className="flex items-center text-sm text-gray-500">
+                  <X className="h-4 w-4 mr-2" />
+                  {new Date(selectedImage.date).toLocaleDateString("id-ID", {
+                    year: "numeric",
+                    month: "long",
+                    day: "numeric",
+                  })}
+                </div>
+              </div>
+            </div>
+          )}
+        </DialogContent>
+      </Dialog>
+
+      {/* Empty State (if needed) */}
+      {galleryImages.length === 0 && (
+        <div className="text-center py-12">
+          <Images className="h-16 w-16 text-gray-400 mx-auto mb-4" />
+          <h3 className="text-xl font-semibold text-gray-600 mb-2">Tidak ada foto</h3>
+          <p className="text-gray-500">Belum ada foto yang tersedia di galeri.</p>
+        </div>
+      )}
+    </div>
+  )
+}
