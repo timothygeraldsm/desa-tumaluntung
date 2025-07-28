@@ -4,9 +4,9 @@ import { Badge } from "@/components/ui/badge"
 import { Crown, Users, FileText, Building2, MapPin, Phone, Clock } from "lucide-react"
 
 const officials = [
-  { name: "Bpk. Andreas Lumban Gaol", position: "Hukum Tua", category: "Kepala Desa" photo: "/foto/hukum tua.jpg"},
-  { name: "Ibu Maria Sari Dewi", position: "Sekretaris Desa", category: "Sekretariat" photo: "/foto/sekretaris.jpg"},
-  { name: "Bpk. Jhon Rompis", position: "Bendahara Desa", category: "Sekretariat" photo: "/foto/bendahara.jpg" },
+  { name: "Bpk. Andreas Lumban Gaol", position: "Hukum Tua", category: "Kepala Desa", photo: "/foto/hukum tua.jpg"},
+  { name: "Ibu Maria Sari Dewi", position: "Sekretaris Desa", category: "Sekretariat", photo: "/foto/sekretaris.jpg"},
+  { name: "Bpk. Jhon Rompis", position: "Bendahara Desa", category: "Sekretariat", photo: "/foto/bendahara.jpg" },
   { name: "Bpk. Marthen Kalangi", position: "Kepala Urusan Pemerintahan", category: "Kaur" },
   { name: "Ibu Linda Manurung", position: "Kepala Urusan Pembangunan", category: "Kaur" },
   { name: "Bpk. David Sitorus", position: "Kepala Urusan Kesejahteraan Rakyat", category: "Kaur" },
