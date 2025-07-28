@@ -175,40 +175,18 @@ export default function LocationPage() {
             <span>Peta Lokasi</span>
           </CardTitle>
         </CardHeader>
-        <CardContent>
-          <div className="aspect-video bg-gradient-to-br from-green-100 to-blue-100 rounded-lg flex items-center justify-center relative overflow-hidden">
-            <div className="absolute inset-0 opacity-10">
-              <div className="w-full h-full bg-gradient-to-r from-green-200 via-blue-200 to-green-200"></div>
-            </div>
-            <div className="text-center text-gray-600 z-10">
-              <MapPin className="h-16 w-16 mx-auto mb-4 text-green-600" />
-              <p className="text-xl font-semibold mb-2">Google Maps</p>
-              <p className="text-lg mb-2">Desa Tumaluntung Satu</p>
-              <div className="text-sm space-y-1">
-                <p>Kecamatan Tareran</p>
-                <p>Kabupaten Minahasa Selatan</p>
-                <p>Provinsi Sulawesi Utara</p>
-              </div>
-            </div>
-          </div>
-          <div className="mt-6 grid grid-cols-1 md:grid-cols-3 gap-4 text-sm">
-            <div className="text-center p-3 bg-green-50 rounded-lg">
-              <div className="font-semibold text-green-800">Koordinat</div>
-              <div className="text-green-600">1°25'S, 124°50'E</div>
-            </div>
-            <div className="text-center p-3 bg-blue-50 rounded-lg">
-              <div className="font-semibold text-blue-800">Kode Pos</div>
-              <div className="text-blue-600">95914</div>
-            </div>
-            <div className="text-center p-3 bg-purple-50 rounded-lg">
-              <div className="font-semibold text-purple-800">Zona Waktu</div>
-              <div className="text-purple-600">WITA (UTC+8)</div>
-            </div>
-          </div>
-          <p className="text-sm text-gray-600 mt-4 text-center">
-            * Peta interaktif akan ditampilkan dengan integrasi Google Maps untuk navigasi yang lebih detail
-          </p>
-        </CardContent>
+        <CardContent className="p-0 overflow-hidden rounded-lg">
+  <div className="w-full aspect-video">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63822.9790056176!2d124.65006442021303!3d1.2048583219924984!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3287430c7a4451af%3A0xaad2a85e864091de!2sTumaluntung%2C%20Tareran%2C%20South%20Minahasa%20Regency%2C%20North%20Sulawesi!5e0!3m2!1sen!2sid!4v1753741562082!5m2!1sen!2sid"
+      className="w-full h-full border-0"
+      allowFullScreen
+      loading="lazy"
+      referrerPolicy="no-referrer-when-downgrade"
+    ></iframe>
+  </div>
+</CardContent>
+
       </Card>
     </div>
   )
