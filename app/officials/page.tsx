@@ -6,7 +6,7 @@ import { Crown, Users, FileText, Building2, MapPin, Phone, Clock } from "lucide-
 const officials = [
   { name: "Deny Sony Rumondor", position: "Hukum Tua", category: "Kepala Desa", photo: "/foto/hukum tua.jpg" },
   { name: "Plt. Alvon Keresung, S.Pd", position: "Sekretaris Desa", category: "Sekretariat", photo: "/foto/sekretaris.jpg" },
-  { name: "Feylani Walangitan", position: "Kaur Keuangan", category: "Kaur" },
+  { name: "Feylani Walangitan", position: "Bendahara Desa", category: "Sekretariat", photo: "/foto/bendahara.jpg" },
   { name: "Marten Runtuwene", position: "Kasie Pemerintahan", category: "Kaur" },
   { name: "Zeth N. Liud", position: "Kasie Pelayanan", category: "Kaur" },
   { name: "Deybie Rembet", position: "Kaur TU / Umum", category: "Kaur" },

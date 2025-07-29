@@ -91,45 +91,48 @@ export default function DemographicsPage() {
 
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
         {/* Gender Distribution */}
-        <Card>
-          <CardHeader>
-            <CardTitle className="text-center">Distribusi Berdasarkan Jenis Kelamin</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="flex justify-center">
-              <ChartContainer config={chartConfig} className="h-64 w-full max-w-sm mx-auto">
-                <ResponsiveContainer width="100%" height="100%">
-                  <PieChart>
-                    <Pie
-                      data={populationData}
-                      cx="50%"
-                      cy="50%"
-                      innerRadius={60}
-                      outerRadius={100}
-                      paddingAngle={5}
-                      dataKey="value"
-                    >
-                      {populationData.map((entry, index) => (
-                        <Cell key={`cell-${index}`} fill={entry.color} />
-                      ))}
-                    </Pie>
-                    <ChartTooltip content={<ChartTooltipContent />} />
-                  </PieChart>
-                </ResponsiveContainer>
-              </ChartContainer>
-            </div>
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 mt-4">
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
-                <span className="text-sm">Laki-laki: 523 (50%)</span>
-              </div>
-              <div className="flex items-center space-x-2">
-                <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
-                <span className="text-sm">Perempuan: 523 (50%)</span>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
+<Card>
+  <CardHeader>
+    <CardTitle className="text-center">Distribusi Berdasarkan Jenis Kelamin</CardTitle>
+  </CardHeader>
+  <CardContent>
+    <div className="flex justify-center">
+      <ChartContainer config={chartConfig} className="h-64 w-full max-w-sm mx-auto">
+        <ResponsiveContainer width="100%" height="100%">
+          <PieChart>
+            <Pie
+              data={[
+                { name: "Laki-laki", value: 567, color: "#3B82F6" },  // blue-500
+                { name: "Perempuan", value: 479, color: "#EC4899" }   // pink-500
+              ]}
+              cx="50%"
+              cy="50%"
+              innerRadius={60}
+              outerRadius={100}
+              paddingAngle={5}
+              dataKey="value"
+            >
+              <Cell fill="#3B82F6" />
+              <Cell fill="#EC4899" />
+            </Pie>
+            <ChartTooltip content={<ChartTooltipContent />} />
+          </PieChart>
+        </ResponsiveContainer>
+      </ChartContainer>
+    </div>
+    <div className="flex flex-col sm:flex-row justify-center items-center space-y-2 sm:space-y-0 sm:space-x-6 mt-4">
+      <div className="flex items-center space-x-2">
+        <div className="w-3 h-3 bg-blue-500 rounded-full"></div>
+        <span className="text-sm">Laki-laki: 567 (54.2%)</span>
+      </div>
+      <div className="flex items-center space-x-2">
+        <div className="w-3 h-3 bg-pink-500 rounded-full"></div>
+        <span className="text-sm">Perempuan: 479 (45.8%)</span>
+      </div>
+    </div>
+  </CardContent>
+</Card>
+
 
         {/* Population Growth */}
         <Card>
