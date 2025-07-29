@@ -15,7 +15,7 @@ const jagaData = [
   { jaga: "Jaga II", households: 48, male: 83, female: 77, total: 160 },
   { jaga: "Jaga III", households: 55, male: 95, female: 85, total: 180 },
   { jaga: "Jaga IV", households: 56, male: 103, female: 81, total: 184 },
-  { jaga: "Jaga V", households: 74, male: 135, female: 120,
+  { jaga: "Jaga V", households: 74, male: 135, female: 120},
 
 const growthData = [
   { year: 2019, population: 823 },
