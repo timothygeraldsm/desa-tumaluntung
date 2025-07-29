@@ -44,13 +44,6 @@ export default function FormerHeadsPage() {
                 </div>
               </div>
             </div>
-            <div>
-              <h3 className="font-semibold text-green-800 mb-3">Periode Jabatan</h3>
-              <p className="text-sm text-gray-600">
-                Masa jabatan Kepala Desa adalah 6 tahun dan dapat dipilih kembali untuk satu kali masa jabatan
-                berikutnya. Pemilihan dilakukan secara langsung oleh masyarakat desa.
-              </p>
-            </div>
           </div>
         </CardContent>
       </Card>
