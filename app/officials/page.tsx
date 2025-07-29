@@ -4,22 +4,21 @@ import { Badge } from "@/components/ui/badge"
 import { Crown, Users, FileText, Building2, MapPin, Phone, Clock } from "lucide-react"
 
 const officials = [
-  { name: "Bpk. Andreas Lumban Gaol", position: "Hukum Tua", category: "Kepala Desa", photo: "/foto/hukum tua.jpg"},
-  { name: "Ibu Maria Sari Dewi", position: "Sekretaris Desa", category: "Sekretariat", photo: "/foto/sekretaris.jpg"},
-  { name: "Bpk. Jhon Rompis", position: "Bendahara Desa", category: "Sekretariat", photo: "/foto/bendahara.jpg" },
-  { name: "Bpk. Marthen Kalangi", position: "Kepala Urusan Pemerintahan", category: "Kaur" },
-  { name: "Ibu Linda Manurung", position: "Kepala Urusan Pembangunan", category: "Kaur" },
-  { name: "Bpk. David Sitorus", position: "Kepala Urusan Kesejahteraan Rakyat", category: "Kaur" },
-  { name: "Bpk. Robert Hutabarat", position: "Kepala Urusan Keuangan", category: "Kaur" },
-  { name: "Ibu Sari Simbolon", position: "Kepala Urusan Umum", category: "Kaur" },
-  { name: "Bpk. Michael Panjaitan", position: "Kepala Jaga I", category: "Kepala Jaga" },
-  { name: "Bpk. Daniel Siahaan", position: "Kepala Jaga II", category: "Kepala Jaga" },
-  { name: "Bpk. Samuel Tampubolon", position: "Kepala Jaga III", category: "Kepala Jaga" },
-  { name: "Bpk. Thomas Sinaga", position: "Kepala Jaga IV", category: "Kepala Jaga" },
-  { name: "Bpk. Antonius Lumban Gaol", position: "Kepala Jaga V", category: "Kepala Jaga" },
-  { name: "Bpk. Martinus Sitompul", position: "Kepala Jaga VI", category: "Kepala Jaga" },
-  { name: "Bpk. Wilhelmus Rompis", position: "Kepala Jaga VII", category: "Kepala Jaga" },
-]
+  { name: "Deny Sony Rumondor", position: "Hukum Tua", category: "Kepala Desa", photo: "/foto/hukum tua.jpg" },
+  { name: "Plt. Alvon Keresung, S.Pd", position: "Sekretaris Desa", category: "Sekretariat", photo: "/foto/sekretaris.jpg" },
+  { name: "Feylani Walangitan", position: "Kaur Keuangan", category: "Kaur" },
+  { name: "Marten Runtuwene", position: "Kasie Pemerintahan", category: "Kaur" },
+  { name: "Zeth N. Liud", position: "Kasie Pelayanan", category: "Kaur" },
+  { name: "Deybie Rembet", position: "Kaur TU / Umum", category: "Kaur" },
+  { name: "Johny Jefry Rontos", position: "Kasie Kesejahteraan", category: "Kaur" },
+  { name: "Junus Singal", position: "Staf Pemerintahan", category: "Kaur" },
+  { name: "Heyne A. Sumendap", position: "Staf Kesejahteraan", category: "Kaur" },
+  { name: "Novtalia Keresung", position: "Staf TU/Umum dan Perencanaan", category: "Kaur" },
+  { name: "Maya Rumengan", position: "Kepala Jaga Satu", category: "Kepala Jaga" },
+  { name: "Jhon R. Kawung", position: "Kepala Jaga Dua", category: "Kepala Jaga" },
+  { name: "Sontje N. Lambonan", position: "Kepala Jaga Tiga", category: "Kepala Jaga" },
+  { name: "Steven S. Liud", position: "Kepala Jaga Empat", category: "Kepala Jaga" },
+  { name: "Deki J. J. Sumendap", position: "Kepala Jaga Lima", category: "Kepala
 
 const getCategoryColor = (category: string) => {
   switch (category) {
