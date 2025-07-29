@@ -26,28 +26,29 @@ export default function FormerHeadsPage() {
 
       {/* Statistics Cards */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-8">
-        <Card className="text-center">
-          <CardContent className="p-6">
-            <Calendar className="h-8 w-8 text-blue-600 mx-auto mb-3" />
-            <div className="text-3xl font-bold text-blue-600 mb-2">14</div>
-            <div className="text-sm text-gray-600">Tahun Kepemimpinan</div>
-          </CardContent>
-        </Card>
-        <Card className="text-center">
-          <CardContent className="p-6">
-            <User className="h-8 w-8 text-green-600 mx-auto mb-3" />
-            <div className="text-3xl font-bold text-green-600 mb-2">4</div>
-            <div className="text-sm text-gray-600">Total Hukum Tua</div>
-          </CardContent>
-        </Card>
-        <Card className="text-center">
-          <CardContent className="p-6">
-            <Award className="h-8 w-8 text-purple-600 mx-auto mb-3" />
-            <div className="text-3xl font-bold text-purple-600 mb-2">3</div>
-            <div className="text-sm text-gray-600">Hukum Tua Definitif</div>
-          </CardContent>
-        </Card>
-      </div>
+  <Card className="text-center">
+    <CardContent className="p-6">
+      <Calendar className="h-8 w-8 text-blue-600 mx-auto mb-3" />
+      <div className="text-3xl font-bold text-blue-600 mb-2">15</div>
+      <div className="text-sm text-gray-600">Tahun Kepemimpinan</div>
+    </CardContent>
+  </Card>
+  <Card className="text-center">
+    <CardContent className="p-6">
+      <User className="h-8 w-8 text-green-600 mx-auto mb-3" />
+      <div className="text-3xl font-bold text-green-600 mb-2">5</div>
+      <div className="text-sm text-gray-600">Total Hukum Tua</div>
+    </CardContent>
+  </Card>
+  <Card className="text-center">
+    <CardContent className="p-6">
+      <Award className="h-8 w-8 text-purple-600 mx-auto mb-3" />
+      <div className="text-3xl font-bold text-purple-600 mb-2">2</div>
+      <div className="text-sm text-gray-600">Hukum Tua Definitif</div>
+    </CardContent>
+  </Card>
+</div>
+
 
       <Card className="mb-8">
         <CardHeader>
@@ -113,13 +114,6 @@ export default function FormerHeadsPage() {
                   <span className="text-gray-600">Pelaksana Tugas sementara</span>
                 </div>
               </div>
-            </div>
-            <div>
-              <h3 className="font-semibold text-green-800 mb-3">Periode Jabatan</h3>
-              <p className="text-sm text-gray-600">
-                Masa jabatan Kepala Desa adalah 6 tahun dan dapat dipilih kembali untuk satu kali masa jabatan
-                berikutnya. Pemilihan dilakukan secara langsung oleh masyarakat desa.
-              </p>
             </div>
           </div>
         </CardContent>
