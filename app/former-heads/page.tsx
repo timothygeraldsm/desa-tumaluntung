@@ -94,44 +94,6 @@ export default function FormerHeadsPage() {
         </CardContent>
       </Card>
 
-      {/* Timeline */}
-      <Card>
-        <CardHeader>
-          <CardTitle>Timeline Kepemimpinan</CardTitle>
-        </CardHeader>
-        <CardContent>
-          <div className="space-y-6">
-            {formerHeads.map((head, index) => (
-              <div key={head.no} className="flex items-start space-x-4">
-                <div className="flex-shrink-0">
-                  <div
-                    className={`w-10 h-10 rounded-full flex items-center justify-center text-white font-bold ${
-                      head.notes === "Definitif" ? "bg-green-600" : "bg-yellow-600"
-                    }`}
-                  >
-                    {head.no}
-                  </div>
-                </div>
-                <div className="flex-grow">
-                  <div className="flex items-center space-x-3 mb-2">
-                    <h3 className="font-semibold text-lg">{head.name}</h3>
-                    <Badge
-                      className={
-                        head.notes === "Definitif" ? "bg-green-100 text-green-800" : "bg-yellow-100 text-yellow-800"
-                      }
-                    >
-                      {head.notes}
-                    </Badge>
-                  </div>
-                  <p className="text-gray-600 mb-1">Masa Jabatan: {head.term}</p>
-                  <p className="text-sm text-gray-500">Lama menjabat: {head.years} tahun</p>
-                </div>
-              </div>
-            ))}
-          </div>
-        </CardContent>
-      </Card>
-
       {/* Additional Information */}
       <Card className="mt-8">
         <CardHeader>
