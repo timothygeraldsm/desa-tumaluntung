@@ -6,29 +6,27 @@ import { PieChart, Pie, Cell, BarChart, Bar, XAxis, YAxis, ResponsiveContainer, 
 import { Users, TrendingUp, MapPin, Home } from "lucide-react"
 
 const populationData = [
-  { name: "Laki-laki", value: 523, color: "#3b82f6" },
-  { name: "Perempuan", value: 523, color: "#ec4899" },
+  { name: "Laki-laki", value: 567, color: "#3b82f6" },
+  { name: "Perempuan", value: 479, color: "#ec4899" },
 ]
 
 const jagaData = [
-  { jaga: "Jaga I", households: 25, male: 78, female: 82, total: 160 },
-  { jaga: "Jaga II", households: 28, male: 85, female: 79, total: 164 },
-  { jaga: "Jaga III", households: 22, male: 71, female: 75, total: 146 },
-  { jaga: "Jaga IV", households: 30, male: 92, female: 88, total: 180 },
-  { jaga: "Jaga V", households: 26, male: 81, female: 84, total: 165 },
-  { jaga: "Jaga VI", households: 24, male: 76, female: 73, total: 149 },
-  { jaga: "Jaga VII", households: 27, male: 83, female: 87, total: 170 },
-]
+  { jaga: "Jaga I", households: 80, male: 151, female: 116, total: 267 },
+  { jaga: "Jaga II", households: 48, male: 83, female: 77, total: 160 },
+  { jaga: "Jaga III", households: 55, male: 95, female: 85, total: 180 },
+  { jaga: "Jaga IV", households: 56, male: 103, female: 81, total: 184 },
+  { jaga: "Jaga V", households: 74, male: 135, female: 120,
 
 const growthData = [
-  { year: 2018, population: 950 },
-  { year: 2019, population: 975 },
-  { year: 2020, population: 995 },
-  { year: 2021, population: 1010 },
-  { year: 2022, population: 1025 },
-  { year: 2023, population: 1040 },
-  { year: 2024, population: 1046 },
+  { year: 2019, population: 823 },
+  { year: 2020, population: 856 },
+  { year: 2021, population: 890 },
+  { year: 2022, population: 926 },
+  { year: 2023, population: 963 },
+  { year: 2024, population: 1001 },
+  { year: 2025, population: 1046 },
 ]
+
 
 const chartConfig = {
   male: {
@@ -250,31 +248,6 @@ export default function DemographicsPage() {
           </CardContent>
         </Card>
 
-        <Card>
-          <CardHeader>
-            <CardTitle>Distribusi Wilayah</CardTitle>
-          </CardHeader>
-          <CardContent>
-            <div className="space-y-3">
-              <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                <span className="font-medium">Jaga Terbesar</span>
-                <span className="text-green-600 font-semibold">Jaga IV (180 jiwa)</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                <span className="font-medium">Jaga Terkecil</span>
-                <span className="text-orange-600 font-semibold">Jaga III (146 jiwa)</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                <span className="font-medium">Rata-rata per Jaga</span>
-                <span className="text-blue-600 font-semibold">149 jiwa</span>
-              </div>
-              <div className="flex justify-between items-center p-3 bg-gray-50 rounded-lg">
-                <span className="font-medium">Rata-rata KK per Jaga</span>
-                <span className="text-purple-600 font-semibold">26 KK</span>
-              </div>
-            </div>
-          </CardContent>
-        </Card>
       </div>
     </div>
   )
