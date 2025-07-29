@@ -4,10 +4,13 @@ import { Badge } from "@/components/ui/badge"
 import { Calendar, User, Award } from "lucide-react"
 
 const formerHeads = [
-  { no: 1, name: "Bpk. Wilhelmus Rompis", term: "2010-2016", notes: "Definitif", years: 6 },
-  { no: 2, name: "Bpk. Marthen Kalangi", term: "2016-2017", notes: "Plt", years: 1 },
-  { no: 3, name: "Bpk. Jhon Rompis", term: "2017-2023", notes: "Definitif", years: 6 },
-  { no: 4, name: "Bpk. Andreas Lumban Gaol", term: "2023-Sekarang", notes: "Definitif", years: 1 },
+  { no: 1, name: "Verrye Tumbel", term: "26 Juli 2010 s/d 16 April 2011", notes: "Penjabat", years: 0.75 },
+  { no: 2, name: "Ruddy M. S. Longdong", term: "17 April 2011 s/d 04 Agustus 2011", notes: "Plt", years: 0.33 },
+  { no: 3, name: "Verrye Tumbel", term: "04 Agustus 2011 s/d 09 Agustus 2017", notes: "Definitif", years: 6 },
+  { no: 4, name: "Arther Hadi Mokalu", term: "09 Agustus 2017 s/d 26 Februari 2021", notes: "Penjabat", years: 3.5 },
+  { no: 5, name: "Yenny Dincemilda Laode, SH, MH", term: "26 Februari 2021 s/d 09 September 2021", notes: "Penjabat", years: 0.5 },
+  { no: 6, name: "Arther Hadi Mokalu", term: "10 September 2021 s/d 02 November 2022", notes: "Penjabat", years: 1.2 },
+  { no: 7, name: "Deny Sony Rumondor", term: "03 November 2022 sampai sekarang", notes: "Definitif", years: 2 },
 ]
 
 export default function FormerHeadsPage() {
