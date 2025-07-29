@@ -18,7 +18,8 @@ const officials = [
   { name: "Jhon R. Kawung", position: "Kepala Jaga Dua", category: "Kepala Jaga" },
   { name: "Sontje N. Lambonan", position: "Kepala Jaga Tiga", category: "Kepala Jaga" },
   { name: "Steven S. Liud", position: "Kepala Jaga Empat", category: "Kepala Jaga" },
-  { name: "Deki J. J. Sumendap", position: "Kepala Jaga Lima", category: "Kepala
+  { name: "Deki J. J. Sumendap", position: "Kepala Jaga Lima", category: "Kepala Jaga" },
+]
 
 const getCategoryColor = (category: string) => {
   switch (category) {
