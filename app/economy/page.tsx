@@ -66,30 +66,6 @@ export default function EconomyPage() {
         </p>
       </div>
 
-      {/* Economic Indicators */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
-        {economicIndicators.map((item, index) => (
-          <Card key={index} className="text-center">
-            <CardContent className="p-6">
-              <TrendingUp className="h-8 w-8 text-green-600 mx-auto mb-3" />
-              <div className={`text-2xl font-bold ${item.color} mb-2`}>{item.value}</div>
-              <div className="text-sm text-gray-600 mb-1">{item.indicator}</div>
-              <div
-                className={`text-xs px-2 py-1 rounded-full ${
-                  item.trend === "meningkat"
-                    ? "bg-green-100 text-green-700"
-                    : item.trend === "menurun"
-                      ? "bg-red-100 text-red-700"
-                      : "bg-blue-100 text-blue-700"
-                }`}
-              >
-                {item.trend}
-              </div>
-            </CardContent>
-          </Card>
-        ))}
-      </div>
-
       {/* Occupation Distribution */}
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 mb-8">
         <Card>

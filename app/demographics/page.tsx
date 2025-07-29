@@ -83,7 +83,7 @@ export default function DemographicsPage() {
         <Card className="text-center">
           <CardContent className="p-6">
             <Home className="h-8 w-8 text-purple-600 mx-auto mb-3" />
-            <div className="text-3xl font-bold text-purple-600 mb-2">182</div>
+            <div className="text-3xl font-bold text-purple-600 mb-2">313</div>
             <div className="text-sm text-gray-600">Total KK</div>
           </CardContent>
         </Card>
