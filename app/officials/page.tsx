@@ -88,14 +88,14 @@ export default function OfficialsPage() {
         <Card className="text-center border-green-200 bg-green-50">
           <CardContent className="p-6">
             <Building2 className="h-8 w-8 text-green-600 mx-auto mb-3" />
-            <div className="text-3xl font-bold text-green-600 mb-2">5</div>
+            <div className="text-3xl font-bold text-green-600 mb-2">7</div>
             <div className="text-sm text-green-700 font-medium">Kepala Urusan</div>
           </CardContent>
         </Card>
         <Card className="text-center border-purple-200 bg-purple-50">
           <CardContent className="p-6">
             <MapPin className="h-8 w-8 text-purple-600 mx-auto mb-3" />
-            <div className="text-3xl font-bold text-purple-600 mb-2">7</div>
+            <div className="text-3xl font-bold text-purple-600 mb-2">5</div>
             <div className="text-sm text-purple-700 font-medium">Kepala Jaga</div>
           </CardContent>
         </Card>
